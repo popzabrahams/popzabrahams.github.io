@@ -981,7 +981,7 @@
   <section id="home" class="hero">
       <div class="container">
         <h1 class="floating">Professional Documents That Open Doors</h1>
-        <p class="floating floating-delay-1">CoverMeClever crafts standout CVs, cover letters, brochures, and pamphlets to elevate your personal or business profile with a friendly, personal touch.</p>
+        <p class="floating floating-delay-1">CoverMeClever crafts standout CVs, cover letters, brochures, pamphlets, and logos to elevate your personal or business profile with a friendly, personal touch.</p>
         <a href="#contact" class="btn floating floating-delay-2">Get Started Today</a>
 
         <div class="hero-icons">
@@ -989,7 +989,7 @@
             <div class="hero-icon floating floating-delay-1"><i class="fas fa-envelope-open-text"></i></div>
             <div class="hero-icon floating floating-delay-2"><i class="fas fa-book-open"></i></div>
             <div class="hero-icon floating"><i class="fas fa-file-pdf"></i></div>
-            <div class="hero-icon floating floating-delay-1"><i class="fas fa-star"></i></div>
+            <div class="hero-icon floating floating-delay-1"><i class="fas fa-paint-brush"></i></div>
         </div>
       </div>
   </section>
@@ -1028,6 +1028,13 @@
           <h3>Pamphlet Design</h3>
           <p>Engaging and professional pamphlets perfect for events, promotions, or sharing key information with your audience.</p>
         </div>
+        <div class="service-card">
+            <div class="service-icon">
+                 <i class="fas fa-paint-brush"></i>
+            </div>
+          <h3>Logo Design</h3>
+          <p>Creative and memorable logo designs that capture your brand identity and leave a lasting impression.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1048,6 +1055,12 @@
           <div class="price">R140</div>
           <p>Tailored Cover Letter</p>
         </a>
+        <a href="#order" class="price-card" onclick="selectService('CV & Cover Letter Bundle', 'R200')">
+          <h3>CV & Cover Letter Bundle</h3>
+          <div class="price">R200</div>
+          <p>Complete Application Package</p>
+          <small>Save R80 with this bundle!</small>
+        </a>
         <a href="#order" class="price-card" onclick="selectService('Brochure', 'R200')">
           <h3>Brochure</h3>
           <div class="price">R200</div>
@@ -1058,12 +1071,18 @@
           <div class="price">R200</div>
           <p>Effective Pamphlet Design</p>
         </a>
-        <a href="#order" class="price-card popular" onclick="selectService('Bundle Deal', 'R300')">
-            <span class="popular-tag">Popular</span>
-          <h3>Bundle Deal</h3>
+        <a href="#order" class="price-card" onclick="selectService('Brochure & Pamphlet Bundle', 'R300')">
+          <h3>Brochure & Pamphlet Bundle</h3>
           <div class="price">R300</div>
-          <p>(CV + Cover Letter OR Brochure + Pamphlet)</p>
-          <small>Save R80 with our bundle offer!</small>
+          <p>Complete Marketing Package</p>
+          <small>Save R100 with this bundle!</small>
+        </a>
+        <a href="#order" class="price-card popular" onclick="selectService('Logo Design', 'R200')">
+            <span class="popular-tag">Popular</span>
+          <h3>Logo Design</h3>
+          <div class="price">R200</div>
+          <p>Custom Logo Creation</p>
+          <small>Describe your vision in detail!</small>
         </a>
       </div>
     </div>
@@ -1079,10 +1098,10 @@
             <p><strong>Price:</strong> <span id="selected-price">R0</span></p>
         </div>
 
-        <form id="order-form" action="https://formsubmit.co/abrahamscallen@gmail.com" method="POST">
+        <form id="order-form" action="https://formsubmit.co/popzabrahams01@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New Order from CoverMeClever Website">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://formsubmit.co/abrahamscallen@gmail.com/thanks.html">
+            <input type="hidden" name="_next" value="https://formsubmit.co/popzabrahams01@gmail.com/thanks.html">
 
             <label for="customer-name">Full Name *</label>
             <input type="text" id="customer-name" name="name" placeholder="e.g., Jane Smith" required>
@@ -1094,7 +1113,7 @@
             <input type="text" id="service-type" name="service_ordered" readonly required>
 
             <label for="order-description">Tell Us About It! *</label>
-            <textarea id="order-description" name="description" placeholder="This is where the magic happens! The more detail, the better. For a CV: List your work history, skills, education. For a Cover Letter: What job are you applying for? For Designs: What's the message? Who's the audience?" required></textarea>
+            <textarea id="order-description" name="description" placeholder="This is where the magic happens! The more detail, the better. For a CV: List your work history, skills, education. For a Cover Letter: What job are you applying for? For Designs: What's the message? Who's the audience? For Logo Design: Please describe your vision in detail - colors, style, elements you want included, etc." required></textarea>
 
             <div id="payment-section">
                 <h3>Payment Method</h3>
@@ -1125,7 +1144,7 @@
           <!-- FormSubmit Form - Matching Website Style -->
           <div class="form-container">
             <h3>Send Us a Message</h3>
-            <form class="contact-form" action="https://formsubmit.co/abrahamscallen@gmail.com" method="POST">
+            <form class="contact-form" action="https://formsubmit.co/popzabrahams01@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="New Message from CoverMeClever Website">
               
               <label for="contact-name">Full Name *</label>
@@ -1141,6 +1160,7 @@
                 <option value="Cover Letter">Cover Letter</option>
                 <option value="Brochure">Brochure Design</option>
                 <option value="Pamphlet">Pamphlet Design</option>
+                <option value="Logo Design">Logo Design</option>
                 <option value="Bundle">Bundle Deal</option>
                 <option value="General Inquiry">Just saying Hi!</option>
               </select>
