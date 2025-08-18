@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoverMeClever - Professional Documents That Open Doors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Nunito:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      /* More Vibrant & Friendly Color Palette */
+      --primary: #2563eb;       /* Vibrant Blue */
+      --primary-light: #60a5fa; /* Lighter Blue */
+      --secondary: #10b981;     /* Friendly Green */
+      --accent: #8b5cf6;        /* Soft Purple */
+      --accent2: #f59e0b;       /* Warm Amber for highlights */
+      --bg-main: #f0f9ff;       /* Softer light background */
+      --bg-card: #ffffff;       /* Crisp White */
+      --text-dark: #1e293b;     /* Dark text */
+      --text-light: #475569;    /* Softer body text */
+      --border: #d1d5db;        /* Light border */
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.277);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-main);
+      background-image: radial-gradient(#dbeafe 1px, transparent 1px), radial-gradient(#dbeafe 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 1.2rem;
+      color: var(--primary);
+      position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: var(--accent2);
+        border-radius: 2px;
+        margin: 0.8rem auto;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--text-light);
+      max-width: 750px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-secondary {
+        background: linear-gradient(90deg, var(--secondary), #0d9488);
+        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-secondary:hover {
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Header */
+    header {
+      background-color: var(--bg-card);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 2rem;
+    }
+
+    nav ul li a {
+      font-weight: 600;
+      font-size: 1.05rem;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--accent);
+    }
+
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        transition: var(--transition);
+    }
+
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 6rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+        z-index: -1;
+    }
+
+    .hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 1.2rem;
+      color: var(--primary);
+      line-height: 1.2;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: var(--text-light);
+      max-width: 750px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .floating {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-delay-1 {
+        animation-delay: 1s;
+    }
+
+    .floating-delay-2 {
+        animation-delay: 2s;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .hero-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-icon {
+        font-size: 2.5rem;
+        color: var(--primary-light);
+        opacity: 0.8;
+    }
+
+    /* Section */
+    section {
+      padding: 5rem 0;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: linear-gradient(120deg, var(--primary-light), var(--secondary));
+        opacity: 0.1;
+        z-index: -1;
+        transition: height 0.5s ease;
+    }
+
+    .service-card:hover::before {
+        height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary-light);
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--primary-light), var(--accent));
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.8rem auto;
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+    }
+
+    .service-card i {
+      font-size: 2.2rem;
+      color: white;
+    }
+
+    .service-card h3 {
+      margin-bottom: 1.2rem;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .service-card p {
+        color: var(--text-light);
+        font-size: 1rem;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .price-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(transparent, var(--accent2), transparent 30%);
+        animation: rotate 4s linear infinite;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .price-card:hover::after {
+        opacity: 0.2;
+    }
+
+    @keyframes rotate {
+        100% { transform: rotate(360deg); }
+    }
+
+    .price-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        border-color: var(--primary-light);
+    }
+
+    .price-card.popular {
+        border: 2px solid var(--accent2);
+        transform: scale(1.05);
+    }
+
+    .popular-tag {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, var(--accent2), #e11d48);
+        color: white;
+        padding: 0.4rem 1.2rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+    }
+
+    .price-card h3 {
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      color: var(--text-dark);
+    }
+
+    .price {
+      font-size: 2.3rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+    }
+
+    .price-card small {
+        display: block;
+        color: var(--text-light);
+        margin-top: 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    /* Order Form Section */
+    #order {
+        background: var(--bg-card);
+        border-radius: 16px;
+        padding: 3.5rem;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        max-width: 850px;
+        margin: 3rem auto;
+        display: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #order::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    #order h2 {
+        margin-bottom: 1.8rem;
+        text-align: center;
+        color: var(--primary);
+    }
+
+    #order-form {
+        margin-top: 1.8rem;
+    }
+
+    #order-form label {
+        display: block;
+        margin-bottom: 0.6rem;
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+    #order-form input, #order-form textarea, #order-form select {
+        width: 100%;
+        padding: 1rem 1.3rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem;
+        transition: var(--transition);
+        background-color: #f9fafb;
+    }
+
+    #order-form input:focus, #order-form textarea:focus, #order-form select:focus {
+        outline: none;
+        border-color: var(--primary-light);
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+        background-color: white;
+    }
+
+    #order-form textarea {
+        height: 160px;
+        resize: vertical;
+    }
+
+    #order-details {
+        background: linear-gradient(120deg, #eff6ff, #ecfdf5);
+        padding: 1.8rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--accent2);
+    }
+
+    #order-details h3 {
+        margin-top: 0;
+        color: var(--primary);
+    }
+
+    #order-details p {
+        margin: 0.4rem 0;
+        font-size: 1.05rem;
+    }
+
+    #payment-section {
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px dashed var(--border);
+    }
+
+    #payment-section h3 {
+        margin-bottom: 1.2rem;
+        color: var(--primary);
+    }
+
+    .payment-methods {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 1.8rem;
+        flex-wrap: wrap;
+    }
+
+    .payment-method {
+        padding: 0.9rem 1.8rem;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: var(--transition);
+        background-color: #f9fafb;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    .payment-method:hover, .payment-method.selected {
+        border-color: var(--primary-light);
+        background: linear-gradient(120deg, #eff6ff, #dbeafe);
+        transform: translateY(-3px);
+    }
+
+    .payment-method i {
+        margin-right: 0.7rem;
+        font-size: 1.3rem;
+    }
+
+    /* Contact */
+    .contact-section {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 3.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.5rem;
+    }
+
+    .form-container, .whatsapp-container {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .form-container h3, .whatsapp-container h3 {
+      margin-bottom: 1.8rem;
+      font-size: 1.6rem;
+      color: var(--primary);
+      position: relative;
+      padding-bottom: 0.8rem;
+    }
+
+    .form-container h3::after, .whatsapp-container h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent2);
+      border-radius: 2px;
+    }
+
+    .whatsapp-container p {
+        color: var(--text-light);
+        margin-bottom: 1.8rem;
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(90deg, #25D366, #128C7E);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: var(--transition);
+      border: none;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp-btn i {
+      margin-right: 0.9rem;
+      font-size: 1.4rem;
+    }
+
+    .whatsapp-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+
+    /* Enhanced Form Styling - Matching Website Style */
+    .contact-form {
+      background: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .contact-form input, 
+    .contact-form select, 
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem 1.3rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      transition: var(--transition);
+      background-color: #f9fafb;
+    }
+
+    .contact-form input:focus, 
+    .contact-form select:focus, 
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+      background-color: white;
+    }
+
+    .contact-form textarea {
+      height: 160px;
+      resize: vertical;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .contact-form .btn {
+      width: 100%;
+      padding: 1.1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, var(--primary), #1e40af);
+      color: white;
+      text-align: center;
+      padding: 3rem 0 2rem;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    footer::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C25,20 75,20 100,0 L100,20 L0,20 Z" fill="%232563eb"/></svg>') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    footer p {
+        margin: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 0.9rem 0;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .contact-section, #order {
+        padding: 2.5rem;
+      }
+
+      .contact-container {
+          flex-direction: column;
+      }
+
+      .price-card.popular {
+          transform: scale(1);
+      }
+
+      .payment-methods {
+          flex-direction: column;
+      }
+
+      .hero-icons {
+          gap: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">CoverMeClever</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+      <div class="container">
+        <h1 class="floating">Professional Documents That Open Doors</h1>
+        <p class="floating floating-delay-1">CoverMeClever crafts standout CVs, cover letters, brochures, and pamphlets to elevate your personal or business profile with a friendly, personal touch.</p>
+        <a href="#contact" class="btn floating floating-delay-2">Get Started Today</a>
+
+        <div class="hero-icons">
+            <div class="hero-icon floating"><i class="fas fa-file-alt"></i></div>
+            <div class="hero-icon floating floating-delay-1"><i class="fas fa-envelope-open-text"></i></div>
+            <div class="hero-icon floating floating-delay-2"><i class="fas fa-book-open"></i></div>
+            <div class="hero-icon floating"><i class="fas fa-file-pdf"></i></div>
+            <div class="hero-icon floating floating-delay-1"><i class="fas fa-star"></i></div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Creative Services</h2>
+      <p class="section-subtitle">We specialize in creating high-quality, personalized documents that make a lasting impression and feel uniquely you.</p>
+      <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+          <h3>CV Writing</h3>
+          <p>Meticulously crafted CVs that highlight your strengths and align with industry standards to get you noticed by employers.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                 <i class="fas fa-envelope-open-text"></i>
+            </div>
+          <h3>Cover Letter</h3>
+          <p>Personalized and persuasive cover letters tailored to specific roles, complementing your CV for maximum impact.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                 <i class="fas fa-book-open"></i>
+            </div>
+          <h3>Brochure Design</h3>
+          <p>Visually stunning and informative brochures designed to effectively communicate your brand message and services.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                 <i class="fas fa-file-pdf"></i>
+            </div>
+          <h3>Pamphlet Design</h3>
+          <p>Engaging and professional pamphlets perfect for events, promotions, or sharing key information with your audience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple, Clear Pricing</h2>
+      <p class="section-subtitle">No hidden fees. Choose the service that fits your needs and budget. We make it easy and friendly.</p>
+      <div class="pricing-grid">
+        <a href="#order" class="price-card" onclick="selectService('CV', 'R140')">
+          <h3>CV</h3>
+          <div class="price">R140</div>
+          <p>Professional CV Writing</p>
+        </a>
+        <a href="#order" class="price-card" onclick="selectService('Cover Letter', 'R140')">
+          <h3>Cover Letter</h3>
+          <div class="price">R140</div>
+          <p>Tailored Cover Letter</p>
+        </a>
+        <a href="#order" class="price-card" onclick="selectService('Brochure', 'R200')">
+          <h3>Brochure</h3>
+          <div class="price">R200</div>
+          <p>Custom Brochure Design</p>
+        </a>
+        <a href="#order" class="price-card" onclick="selectService('Pamphlet', 'R200')">
+          <h3>Pamphlet</h3>
+          <div class="price">R200</div>
+          <p>Effective Pamphlet Design</p>
+        </a>
+        <a href="#order" class="price-card popular" onclick="selectService('Bundle Deal', 'R300')">
+            <span class="popular-tag">Popular</span>
+          <h3>Bundle Deal</h3>
+          <div class="price">R300</div>
+          <p>(CV + Cover Letter OR Brochure + Pamphlet)</p>
+          <small>Save R80 with our bundle offer!</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order">
+    <div class="container">
+        <h2 id="order-title">Place Your Order</h2>
+        <div id="order-details">
+            <h3>Your Order Summary</h3>
+            <p><strong>Service:</strong> <span id="selected-service">Please select a service</span></p>
+            <p><strong>Price:</strong> <span id="selected-price">R0</span></p>
+        </div>
+
+        <form id="order-form" action="https://formsubmit.co/abrahamscallen@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Order from CoverMeClever Website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://formsubmit.co/abrahamscallen@gmail.com/thanks.html">
+
+            <label for="customer-name">Full Name *</label>
+            <input type="text" id="customer-name" name="name" placeholder="e.g., Jane Smith" required>
+
+            <label for="customer-email">Email Address *</label>
+            <input type="email" id="customer-email" name="email" placeholder="e.g., jane.smith@example.com" required>
+
+            <label for="service-type">Service Ordered *</label>
+            <input type="text" id="service-type" name="service_ordered" readonly required>
+
+            <label for="order-description">Tell Us About It! *</label>
+            <textarea id="order-description" name="description" placeholder="This is where the magic happens! The more detail, the better. For a CV: List your work history, skills, education. For a Cover Letter: What job are you applying for? For Designs: What's the message? Who's the audience?" required></textarea>
+
+            <div id="payment-section">
+                <h3>Payment Method</h3>
+                <p>After submitting, we'll send you payment instructions via email. Easy peasy!</p>
+                <div class="payment-methods">
+                    <div class="payment-method selected">
+                        <i class="fas fa-money-bill-wave"></i> Bank Transfer (EFT)
+                    </div>
+                    <div class="payment-method">
+                        <i class="fab fa-cc-mastercard"></i> Card Payment (Coming Soon)
+                    </div>
+                </div>
+                <p style="font-size: 0.95rem; color: var(--text-light);"><em>* A payment link or invoice will be sent to your email shortly after we receive your order details.</em></p>
+            </div>
+
+            <button type="submit" class="btn">Submit Order & Pay</button>
+        </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Chat!</h2>
+      <p class="section-subtitle">Got questions or ready to dive in? Reach out through the form or give us a shout on WhatsApp. We're friendly and love to help!</p>
+      <div class="contact-section">
+        <div class="contact-container">
+          <!-- FormSubmit Form - Matching Website Style -->
+          <div class="form-container">
+            <h3>Send Us a Message</h3>
+            <form class="contact-form" action="https://formsubmit.co/abrahamscallen@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New Message from CoverMeClever Website">
+              
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" name="name" placeholder="Enter your full name" required>
+
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" name="email" placeholder="your.email@example.com" required>
+
+              <label for="contact-service">What can we help you with? *</label>
+              <select id="contact-service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="CV">CV Writing</option>
+                <option value="Cover Letter">Cover Letter</option>
+                <option value="Brochure">Brochure Design</option>
+                <option value="Pamphlet">Pamphlet Design</option>
+                <option value="Bundle">Bundle Deal</option>
+                <option value="General Inquiry">Just saying Hi!</option>
+              </select>
+
+              <label for="contact-message">Your Message *</label>
+              <textarea id="contact-message" name="message" placeholder="Drop us a line... we're all ears! How can we help you today?" required></textarea>
+
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="whatsapp-container">
+            <h3>Prefer a Quick Chat?</h3>
+            <p>For the fastest response, ping us on WhatsApp. We're usually pretty quick to reply during business hours!</p>
+            <a href="https://wa.me/27718617824" target="_blank" class="whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(120deg, #ecfdf5, #dcfce7); border-radius: 12px; border-left: 4px solid var(--secondary);">
+              <h4 style="color: var(--secondary); margin-top: 0;"><i class="fas fa-bolt"></i> Why Choose WhatsApp?</h4>
+              <ul style="text-align: left; padding-left: 1.5rem; color: var(--text-light);">
+                <li style="margin-bottom: 0.5rem;">Instant responses during business hours</li>
+                <li style="margin-bottom: 0.5rem;">Send documents, images, and files</li>
+                <li style="margin-bottom: 0.5rem;">End-to-end encrypted conversations</li>
+                <li>Quick voice notes for complex questions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 CoverMeClever. All rights reserved.</p>
+      <p>Crafting Professional Documents with a Personal Touch</p>
+    </div>
+  </footer>
+
+  <script>
+    function selectService(serviceName, price) {
+        document.getElementById('selected-service').textContent = serviceName;
+        document.getElementById('selected-price').textContent = price;
+        document.getElementById('service-type').value = serviceName + " (" + price + ")";
+        document.getElementById('order').style.display = 'block';
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+        const serviceName = document.getElementById('selected-service').textContent;
+        if (serviceName === 'Please select a service') {
+            e.preventDefault();
+            alert('Please select a service from the Pricing section first.');
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+  </script>
+
+</body>
+</html>
