@@ -1388,10 +1388,97 @@
                         Please use your full name as the reference when making the payment.
                     </p>
                 </div>
-                <!-- PayFast Payment Form -->
-                <div class="payfast-payment" id="payfast-payment">
-                    <h4>Pay with Card</h4>
-                    <div id="payfast-form-container"></div>
+                <!-- PayFast Payment Forms -->
+                <div class="payfast-payment" id="payfast-cv">
+                    <h4>Pay for CV with Card</h4>
+                    <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="31416887">
+                        <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                        <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                        <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                        <input required type="hidden" name="amount" value="140">
+                        <input required type="hidden" name="item_name" maxlength="255" value="CV">
+                        <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                    </form>
+                </div>
+                <div class="payfast-payment" id="payfast-cover_letter">
+                    <h4>Pay for Cover Letter with Card</h4>
+                    <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="31416887">
+                        <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                        <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                        <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                        <input required type="hidden" name="amount" value="140">
+                        <input required type="hidden" name="item_name" maxlength="255" value="Cover letter">
+                        <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                    </form>
+                </div>
+                <div class="payfast-payment" id="payfast-cv_cover_letter">
+                    <h4>Pay for CV & Cover Letter Bundle with Card</h4>
+                    <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="31416887">
+                        <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                        <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                        <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                        <input required type="hidden" name="amount" value="200">
+                        <input required type="hidden" name="item_name" maxlength="255" value="CV and Cover letter">
+                        <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                    </form>
+                </div>
+                <div class="payfast-payment" id="payfast-brochure">
+                    <h4>Pay for Brochure with Card</h4>
+                    <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="31416887">
+                        <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                        <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                        <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                        <input required type="hidden" name="amount" value="200">
+                        <input required type="hidden" name="item_name" maxlength="255" value="Brochure">
+                        <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                    </form>
+                </div>
+                <div class="payfast-payment" id="payfast-pamphlet">
+                    <h4>Pay for Pamphlet with Card</h4>
+                    <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="31416887">
+                        <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                        <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                        <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                        <input required type="hidden" name="amount" value="200">
+                        <input required type="hidden" name="item_name" maxlength="255" value="Pamphlet">
+                        <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                    </form>
+                </div>
+                <div class="payfast-payment" id="payfast-brochure_pamphlet">
+                    <h4>Pay for Brochure & Pamphlet Bundle with Card</h4>
+                    <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="31416887">
+                        <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                        <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                        <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                        <input required type="hidden" name="amount" value="300">
+                        <input required type="hidden" name="item_name" maxlength="255" value="brochure and pamphlet">
+                        <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                    </form>
+                </div>
+                <div class="payfast-payment" id="payfast-logo">
+                    <h4>Pay for Logo Design with Card</h4>
+                    <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="31416887">
+                        <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                        <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                        <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                        <input required type="hidden" name="amount" value="200">
+                        <input required type="hidden" name="item_name" maxlength="255" value="logo">
+                        <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                    </form>
                 </div>
                 <p style="font-size: 0.95rem; color: var(--text-light);"><em>* A payment link or invoice will be sent to your email shortly after we receive your order details.</em></p>
             </div>
@@ -1504,47 +1591,20 @@
         document.getElementById('selected-price').textContent = price;
         document.getElementById('service-type').value = serviceName + " (" + price + ")";
         
-        // Generate PayFast form based on service
-        generatePayFastForm(serviceType, price.replace('R', ''));
+        // Hide all PayFast forms
+        const payfastForms = document.querySelectorAll('.payfast-payment');
+        payfastForms.forEach(form => form.classList.remove('active'));
+        
+        // Show the selected PayFast form
+        if (serviceType) {
+            const selectedForm = document.getElementById(`payfast-${serviceType}`);
+            if (selectedForm) {
+                selectedForm.classList.add('active');
+            }
+        }
         
         document.getElementById('order').style.display = 'block';
         document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
-    }
-    
-    // Generate PayFast form dynamically
-    function generatePayFastForm(serviceType, amount) {
-        const itemNames = {
-            'cv': 'CV',
-            'cover_letter': 'Cover letter',
-            'cv_cover_letter': 'CV and Cover letter',
-            'brochure': 'Brochure',
-            'pamphlet': 'Pamphlet',
-            'brochure_pamphlet': 'brochure and pamphlet',
-            'logo': 'logo'
-        };
-        
-        const item_name = itemNames[serviceType] || 'Service';
-        
-        const payFastForm = `
-            <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-                <input required type="hidden" name="cmd" value="_paynow">
-                <input required type="hidden" name="receiver" pattern="[0-9]" value="31416887">
-                <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
-                <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
-                <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
-                <input required type="hidden" name="amount" value="${amount}">
-                <input required type="hidden" name="item_name" maxlength="255" value="${item_name}">
-                <table>
-                    <tr>
-                        <td colspan=2 align=center>
-                            <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        `;
-        
-        document.getElementById('payfast-form-container').innerHTML = payFastForm;
     }
     
     // Form Submission
@@ -1618,17 +1678,40 @@
             this.classList.add('selected');
             // Show/hide payment details based on selection
             const bankDetails = document.getElementById('bank-details');
-            const payfastPayment = document.getElementById('payfast-payment');
+            const payfastForms = document.querySelectorAll('.payfast-payment');
             
             if (this.dataset.method === 'eft') {
                 bankDetails.classList.add('active');
-                payfastPayment.classList.remove('active');
+                payfastForms.forEach(form => form.classList.remove('active'));
             } else if (this.dataset.method === 'card') {
                 bankDetails.classList.remove('active');
-                payfastPayment.classList.add('active');
+                // Show the currently selected PayFast form
+                const serviceName = document.getElementById('selected-service').textContent;
+                if (serviceName !== 'Please select a service') {
+                    const serviceType = getServiceTypeFromName(serviceName);
+                    const selectedForm = document.getElementById(`payfast-${serviceType}`);
+                    if (selectedForm) {
+                        selectedForm.classList.add('active');
+                    }
+                }
             }
         });
     });
+    
+    // Helper function to get service type from name
+    function getServiceTypeFromName(name) {
+        const serviceMap = {
+            'CV': 'cv',
+            'Cover Letter': 'cover_letter',
+            'CV & Cover Letter Bundle': 'cv_cover_letter',
+            'Brochure': 'brochure',
+            'Pamphlet': 'pamphlet',
+            'Brochure & Pamphlet Bundle': 'brochure_pamphlet',
+            'Logo Design': 'logo'
+        };
+        return serviceMap[name] || '';
+    }
+    
     // Chatbot Functionality
     const chatbotToggle = document.getElementById('chatbotToggle');
     const chatbot = document.getElementById('chatbot');
