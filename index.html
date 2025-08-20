@@ -23,13 +23,11 @@
       --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
       --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.277);
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text-dark);
@@ -40,18 +38,15 @@
       line-height: 1.7;
       scroll-behavior: smooth;
     }
-
     a {
       text-decoration: none;
       color: inherit;
     }
-
     .container {
       width: 90%;
       max-width: 1200px;
       margin: auto;
     }
-
     .section-title {
       font-family: 'Nunito', sans-serif;
       font-size: 2.8rem;
@@ -60,7 +55,6 @@
       color: var(--primary);
       position: relative;
     }
-
     .section-title::after {
         content: '';
         display: block;
@@ -70,7 +64,6 @@
         border-radius: 2px;
         margin: 0.8rem auto;
     }
-
     .section-subtitle {
       text-align: center;
       font-size: 1.15rem;
@@ -78,7 +71,6 @@
       max-width: 750px;
       margin: 0 auto 3rem auto;
     }
-
     .btn {
       display: inline-block;
       background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -93,21 +85,17 @@
       box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
       text-align: center;
     }
-
     .btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
     }
-
     .btn-secondary {
         background: linear-gradient(90deg, var(--secondary), #0d9488);
         box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
     }
-
     .btn-secondary:hover {
         box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
     }
-
     /* Header */
     header {
       background-color: var(--bg-card);
@@ -117,13 +105,11 @@
       z-index: 1000;
       box-shadow: var(--shadow);
     }
-
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
     .logo {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
@@ -133,16 +119,13 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     nav ul {
       display: flex;
       list-style: none;
     }
-
     nav ul li {
       margin-left: 2rem;
     }
-
     nav ul li a {
       font-weight: 600;
       font-size: 1.05rem;
@@ -150,11 +133,9 @@
       padding: 0.5rem 0;
       transition: color 0.3s ease;
     }
-
     nav ul li a:hover {
         color: var(--accent);
     }
-
     nav ul li a::after {
         content: '';
         position: absolute;
@@ -166,11 +147,9 @@
         background: linear-gradient(90deg, var(--primary), var(--accent));
         transition: var(--transition);
     }
-
     nav ul li a:hover::after {
         width: 100%;
     }
-
     /* Mobile Menu */
     .mobile-menu-btn {
       display: none;
@@ -180,7 +159,6 @@
       cursor: pointer;
       color: var(--primary);
     }
-
     /* Hero */
     .hero {
       padding: 6rem 0 4rem;
@@ -188,7 +166,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero::before {
         content: "";
         position: absolute;
@@ -199,7 +176,6 @@
         background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
         z-index: -1;
     }
-
     .hero h1 {
       font-family: 'Nunito', sans-serif;
       font-size: 3.5rem;
@@ -208,32 +184,26 @@
       line-height: 1.2;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
     }
-
     .hero p {
       font-size: 1.3rem;
       color: var(--text-light);
       max-width: 750px;
       margin: 0 auto 2rem auto;
     }
-
     .floating {
         animation: float 6s ease-in-out infinite;
     }
-
     .floating-delay-1 {
         animation-delay: 1s;
     }
-
     .floating-delay-2 {
         animation-delay: 2s;
     }
-
     @keyframes float {
         0% { transform: translateY(0px); }
         50% { transform: translateY(-20px); }
         100% { transform: translateY(0px); }
     }
-
     .hero-icons {
         display: flex;
         justify-content: center;
@@ -241,25 +211,21 @@
         margin-top: 2rem;
         flex-wrap: wrap;
     }
-
     .hero-icon {
         font-size: 2.5rem;
         color: var(--primary-light);
         opacity: 0.8;
     }
-
     /* Section */
     section {
       padding: 5rem 0;
     }
-
     /* Services */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2.5rem;
     }
-
     .service-card {
       background: var(--bg-card);
       padding: 2.5rem 2rem;
@@ -272,7 +238,6 @@
       overflow: hidden;
       z-index: 1;
     }
-
     .service-card::before {
         content: '';
         position: absolute;
@@ -285,16 +250,13 @@
         z-index: -1;
         transition: height 0.5s ease;
     }
-
     .service-card:hover::before {
         height: 100%;
     }
-
     .service-card:hover {
       transform: translateY(-10px);
       border-color: var(--primary-light);
     }
-
     .service-icon {
         width: 80px;
         height: 80px;
@@ -307,35 +269,29 @@
         box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
         transition: var(--transition);
     }
-
     .service-card:hover .service-icon {
         transform: scale(1.1) rotate(5deg);
         box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
     }
-
     .service-card i {
       font-size: 2.2rem;
       color: white;
     }
-
     .service-card h3 {
       margin-bottom: 1.2rem;
       font-size: 1.5rem;
       color: var(--text-dark);
     }
-
     .service-card p {
         color: var(--text-light);
         font-size: 1rem;
     }
-
     /* Pricing */
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2.5rem;
     }
-
     .price-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -348,7 +304,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .price-card::after {
         content: '';
         position: absolute;
@@ -361,25 +316,20 @@
         z-index: -1;
         opacity: 0;
     }
-
     .price-card:hover::after {
         opacity: 0.2;
     }
-
     @keyframes rotate {
         100% { transform: rotate(360deg); }
     }
-
     .price-card:hover {
         transform: translateY(-10px) scale(1.02);
         border-color: var(--primary-light);
     }
-
     .price-card.popular {
         border: 2px solid var(--accent2);
         transform: scale(1.05);
     }
-
     .popular-tag {
         position: absolute;
         top: -12px;
@@ -393,13 +343,11 @@
         font-weight: 700;
         box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
     }
-
     .price-card h3 {
       margin-bottom: 1.2rem;
       font-size: 1.4rem;
       color: var(--text-dark);
     }
-
     .price {
       font-size: 2.3rem;
       font-weight: 800;
@@ -408,14 +356,12 @@
       -webkit-text-fill-color: transparent;
       margin-bottom: 1.5rem;
     }
-
     .price-card small {
         display: block;
         color: var(--text-light);
         margin-top: 1.2rem;
         font-size: 0.95rem;
     }
-
     /* Order Form Section */
     #order {
         background: var(--bg-card);
@@ -429,7 +375,6 @@
         position: relative;
         overflow: hidden;
     }
-
     #order::before {
         content: "";
         position: absolute;
@@ -439,24 +384,20 @@
         height: 5px;
         background: linear-gradient(90deg, var(--primary), var(--accent));
     }
-
     #order h2 {
         margin-bottom: 1.8rem;
         text-align: center;
         color: var(--primary);
     }
-
     #order-form {
         margin-top: 1.8rem;
     }
-
     #order-form label {
         display: block;
         margin-bottom: 0.6rem;
         font-weight: 600;
         color: var(--text-dark);
     }
-
     #order-form input, #order-form textarea, #order-form select {
         width: 100%;
         padding: 1rem 1.3rem;
@@ -468,19 +409,16 @@
         transition: var(--transition);
         background-color: #f9fafb;
     }
-
     #order-form input:focus, #order-form textarea:focus, #order-form select:focus {
         outline: none;
         border-color: var(--primary-light);
         box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
         background-color: white;
     }
-
     #order-form textarea {
         height: 160px;
         resize: vertical;
     }
-
     #order-details {
         background: linear-gradient(120deg, #eff6ff, #ecfdf5);
         padding: 1.8rem;
@@ -488,35 +426,29 @@
         margin-bottom: 2rem;
         border-left: 4px solid var(--accent2);
     }
-
     #order-details h3 {
         margin-top: 0;
         color: var(--primary);
     }
-
     #order-details p {
         margin: 0.4rem 0;
         font-size: 1.05rem;
     }
-
     #payment-section {
         margin-top: 2.5rem;
         padding-top: 2rem;
         border-top: 1px dashed var(--border);
     }
-
     #payment-section h3 {
         margin-bottom: 1.2rem;
         color: var(--primary);
     }
-
     .payment-methods {
         display: flex;
         gap: 1.2rem;
         margin-bottom: 1.8rem;
         flex-wrap: wrap;
     }
-
     .payment-method {
         padding: 0.9rem 1.8rem;
         border: 1px solid var(--border);
@@ -528,18 +460,359 @@
         align-items: center;
         font-weight: 500;
     }
-
     .payment-method:hover, .payment-method.selected {
         border-color: var(--primary-light);
         background: linear-gradient(120deg, #eff6ff, #dbeafe);
         transform: translateY(-3px);
     }
-
     .payment-method i {
         margin-right: 0.7rem;
         font-size: 1.3rem;
     }
-
+    /* PayFast Payment Form */
+    .payfast-payment {
+        display: none;
+        text-align: center;
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        background: #f0f9ff;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+    }
+    .payfast-payment.active {
+        display: block;
+    }
+    .payfast-payment h4 {
+        margin-top: 0;
+        color: var(--primary);
+        margin-bottom: 1rem;
+    }
+    /* Bank Details */
+    .bank-details {
+        background: #f0f9ff;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        border-left: 4px solid var(--primary);
+        display: none;
+    }
+    .bank-details.active {
+        display: block;
+    }
+    .bank-details h4 {
+        margin-top: 0;
+        color: var(--primary);
+        margin-bottom: 1rem;
+    }
+    .bank-info {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+    .bank-info strong {
+        color: var(--text-dark);
+    }
+    /* File Upload Styles */
+    .file-upload {
+        margin-bottom: 1.5rem;
+    }
+    .file-upload-label {
+        display: block;
+        margin-bottom: 0.6rem;
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+    .file-upload-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px dashed var(--border);
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: #f9fafb;
+        transition: var(--transition);
+    }
+    .file-upload-wrapper:hover {
+        border-color: var(--primary-light);
+        background-color: #f0f9ff;
+    }
+    .file-upload-wrapper i {
+        font-size: 2rem;
+        color: var(--primary-light);
+        margin-right: 1rem;
+    }
+    .file-upload-text {
+        flex: 1;
+        color: var(--text-light);
+    }
+    .file-upload-input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .file-list {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-light);
+    }
+    .file-item {
+        display: flex;
+        align-items: center;
+        margin-top: 0.3rem;
+    }
+    .file-item i {
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+    }
+    /* Chatbot Styles */
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10000;
+    }
+    .chatbot-toggle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      animation: float 3s ease-in-out infinite;
+    }
+    /* Animated Chatbot Icon */
+    .chatbot-toggle::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        transparent, 
+        rgba(255, 255, 255, 0.5), 
+        transparent 30%
+      );
+      animation: rotate 2s linear infinite;
+      z-index: 1;
+    }
+    .chatbot-toggle::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 50%;
+      z-index: 2;
+    }
+    .chatbot-toggle i {
+      position: relative;
+      z-index: 3;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes rotate {
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .chatbot-toggle:hover {
+      transform: scale(1.1);
+    }
+    .chatbot {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: translateY(20px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 10001;
+    }
+    .chatbot.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    .chatbot-header {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .chatbot-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .chatbot-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+    .chatbot-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .chatbot-messages {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .message {
+      max-width: 80%;
+      padding: 0.8rem 1rem;
+      border-radius: 18px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .bot-message {
+      background: #f0f9ff;
+      border-bottom-left-radius: 5px;
+      align-self: flex-start;
+    }
+    .user-message {
+      background: var(--primary);
+      color: white;
+      border-bottom-right-radius: 5px;
+      align-self: flex-end;
+    }
+    .chatbot-input {
+      display: flex;
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+      background: white;
+      flex-shrink: 0;
+    }
+    .chatbot-input input {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .chatbot-input input:focus {
+      border-color: var(--primary-light);
+    }
+    .chatbot-input button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+    .chatbot-input button:hover {
+      background: #1d4ed8;
+    }
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background: #f0f9ff;
+      border-radius: 18px;
+      align-self: flex-start;
+      width: 80px;
+    }
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin: 0 2px;
+      animation: typing 1.4s infinite ease-in-out;
+    }
+    .typing-dot:nth-child(1) { animation-delay: 0s; }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing {
+      0%, 60%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+    }
+    /* Quick Questions */
+    .quick-questions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+      max-height: 120px;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+    .quick-question {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .quick-question:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
     /* Contact */
     .contact-section {
       background: var(--bg-card);
@@ -548,18 +821,15 @@
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
     }
-
     .contact-container {
       display: flex;
       flex-wrap: wrap;
       gap: 3.5rem;
     }
-
     .form-container, .whatsapp-container {
       flex: 1;
       min-width: 300px;
     }
-
     .form-container h3, .whatsapp-container h3 {
       margin-bottom: 1.8rem;
       font-size: 1.6rem;
@@ -567,7 +837,6 @@
       position: relative;
       padding-bottom: 0.8rem;
     }
-
     .form-container h3::after, .whatsapp-container h3::after {
       content: '';
       position: absolute;
@@ -578,14 +847,12 @@
       background: var(--accent2);
       border-radius: 2px;
     }
-
     .whatsapp-container p {
         color: var(--text-light);
         margin-bottom: 1.8rem;
         font-size: 1.05rem;
         line-height: 1.6;
     }
-
     .whatsapp-btn {
       display: inline-flex;
       align-items: center;
@@ -601,17 +868,14 @@
       text-align: center;
       justify-content: center;
     }
-
     .whatsapp-btn i {
       margin-right: 0.9rem;
       font-size: 1.4rem;
     }
-
     .whatsapp-btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
     }
-
     /* Enhanced Form Styling - Matching Website Style */
     .contact-form {
       background: var(--bg-card);
@@ -620,7 +884,6 @@
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
     }
-
     .contact-form input, 
     .contact-form select, 
     .contact-form textarea {
@@ -634,7 +897,6 @@
       transition: var(--transition);
       background-color: #f9fafb;
     }
-
     .contact-form input:focus, 
     .contact-form select:focus, 
     .contact-form textarea:focus {
@@ -643,26 +905,22 @@
       box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
       background-color: white;
     }
-
     .contact-form textarea {
       height: 160px;
       resize: vertical;
     }
-
     .contact-form label {
       display: block;
       margin-bottom: 0.6rem;
       font-weight: 600;
       color: var(--text-dark);
     }
-
     .contact-form .btn {
       width: 100%;
       padding: 1.1rem;
       font-size: 1.1rem;
       font-weight: 600;
     }
-
     /* Footer */
     footer {
       background: linear-gradient(90deg, var(--primary), #1e40af);
@@ -672,7 +930,6 @@
       font-size: 1rem;
       position: relative;
     }
-
     footer::before {
         content: "";
         position: absolute;
@@ -683,39 +940,31 @@
         background: url('image/svg+xml;utf8,<svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C25,20 75,20 100,0 L100,20 L0,20 Z" fill="%232563eb"/></svg>') no-repeat;
         background-size: 100% 100%;
     }
-
     footer p {
         margin: 0.5rem 0;
     }
-
     /* Mobile Optimization */
     @media (max-width: 992px) {
       .section-title {
         font-size: 2.3rem;
       }
-      
       .hero h1 {
         font-size: 2.8rem;
       }
-      
       .hero p {
         font-size: 1.15rem;
       }
-      
       .services-grid, .pricing-grid {
         gap: 1.8rem;
       }
-      
       .service-card, .price-card {
         padding: 2rem 1.5rem;
       }
     }
-
     @media (max-width: 768px) {
       .header-content {
         position: relative;
       }
-      
       .mobile-menu-btn {
         display: block;
         position: absolute;
@@ -723,7 +972,6 @@
         top: 50%;
         transform: translateY(-50%);
       }
-      
       nav {
         position: absolute;
         top: 100%;
@@ -736,103 +984,80 @@
         display: none;
         z-index: 100;
       }
-      
       nav.active {
         display: block;
       }
-      
       nav ul {
         flex-direction: column;
         align-items: flex-start;
       }
-      
       nav ul li {
         margin: 0.8rem 0;
         width: 100%;
       }
-      
       nav ul li a {
         display: block;
         padding: 0.8rem 1rem;
         border-radius: 8px;
         transition: background 0.3s ease;
       }
-      
       nav ul li a:hover {
         background: rgba(37, 99, 235, 0.1);
       }
-      
       .hero {
         padding: 4rem 0 3rem;
       }
-      
       .hero h1 {
         font-size: 2.3rem;
       }
-      
       .hero p {
         font-size: 1.1rem;
       }
-      
       .section-title {
         font-size: 2rem;
       }
-      
       .section-subtitle {
         font-size: 1rem;
       }
-      
       .contact-section, #order {
         padding: 2rem;
       }
-      
       .contact-container {
           flex-direction: column;
       }
-      
       .price-card.popular {
           transform: scale(1);
       }
-      
       .payment-methods {
           flex-direction: column;
       }
-      
       .hero-icons {
           gap: 1.2rem;
       }
-      
       .hero-icon {
         font-size: 2rem;
       }
-      
       .btn {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
       }
-      
       .whatsapp-btn {
         padding: 0.9rem 1.5rem;
         font-size: 1rem;
       }
-      
       .service-card, .price-card {
         padding: 1.8rem 1.5rem;
       }
-      
       .service-icon {
         width: 70px;
         height: 70px;
       }
-      
       .service-card i {
         font-size: 1.8rem;
       }
-      
       .price {
         font-size: 2rem;
       }
-      
       #order-form input, 
       #order-form textarea, 
       #order-form select,
@@ -842,123 +1067,148 @@
         padding: 0.9rem 1.2rem;
         font-size: 1rem;
       }
-      
       .payment-method {
         padding: 0.8rem 1.5rem;
       }
+      .chatbot {
+        width: 300px;
+        height: 400px;
+        bottom: 80px;
+        right: 15px;
+      }
+      .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+      }
     }
-    
     @media (max-width: 480px) {
       .container {
         width: 95%;
       }
-      
       .hero {
         padding: 3rem 0 2rem;
       }
-      
       .hero h1 {
         font-size: 2rem;
       }
-      
       .section-title {
         font-size: 1.8rem;
       }
-      
       .section-subtitle {
         margin-bottom: 2rem;
       }
-      
       section {
         padding: 3rem 0;
       }
-      
       .services-grid, .pricing-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
-      
       .contact-section, #order {
         padding: 1.5rem;
       }
-      
       .contact-form {
         padding: 1.5rem;
       }
-      
       #order {
         padding: 2rem 1.5rem;
       }
-      
       .hero-icons {
         gap: 1rem;
       }
-      
       .hero-icon {
         font-size: 1.8rem;
       }
-      
       .btn {
         padding: 0.7rem 1.3rem;
         font-size: 0.95rem;
       }
-      
       .whatsapp-btn {
         padding: 0.8rem 1.3rem;
         font-size: 0.95rem;
       }
-      
       .service-card, .price-card {
         padding: 1.5rem 1.2rem;
       }
-      
       .service-icon {
         width: 60px;
         height: 60px;
         margin-bottom: 1.2rem;
       }
-      
       .service-card i {
         font-size: 1.5rem;
       }
-      
       .service-card h3 {
         font-size: 1.3rem;
         margin-bottom: 1rem;
       }
-      
       .price {
         font-size: 1.8rem;
         margin-bottom: 1.2rem;
       }
-      
       .price-card h3 {
         font-size: 1.3rem;
         margin-bottom: 1rem;
       }
-      
       #order-details {
         padding: 1.5rem;
       }
-      
       #order-details p {
         font-size: 1rem;
       }
-      
       .payment-method {
         padding: 0.7rem 1.2rem;
         font-size: 0.95rem;
       }
-      
       .payment-method i {
         font-size: 1.1rem;
         margin-right: 0.5rem;
+      }
+      /* Mobile Chatbot Optimization */
+      .chatbot-container {
+        bottom: 15px;
+        right: 15px;
+      }
+      .chatbot {
+        width: calc(100vw - 30px);
+        height: 70vh;
+        max-height: 500px;
+        bottom: 75px;
+        right: 15px;
+        left: 15px;
+      }
+      .chatbot-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+      }
+      .quick-questions {
+        max-height: 100px;
+      }
+      .quick-question {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+      }
+      .message {
+        max-width: 85%;
+        font-size: 0.85rem;
+      }
+      .chatbot-header h3 {
+        font-size: 1rem;
+      }
+      .chatbot-input input {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+      }
+      .chatbot-input button {
+        width: 35px;
+        height: 35px;
       }
     }
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
     <div class="container header-content">
@@ -976,14 +1226,12 @@
       </nav>
     </div>
   </header>
-
   <!-- Hero -->
   <section id="home" class="hero">
       <div class="container">
         <h1 class="floating">Professional Documents That Open Doors</h1>
         <p class="floating floating-delay-1">CoverMeClever crafts standout CVs, cover letters, brochures, pamphlets, and logos to elevate your personal or business profile with a friendly, personal touch.</p>
         <a href="#contact" class="btn floating floating-delay-2">Get Started Today</a>
-
         <div class="hero-icons">
             <div class="hero-icon floating"><i class="fas fa-file-alt"></i></div>
             <div class="hero-icon floating floating-delay-1"><i class="fas fa-envelope-open-text"></i></div>
@@ -993,7 +1241,6 @@
         </div>
       </div>
   </section>
-
   <!-- Services -->
   <section id="services">
     <div class="container">
@@ -1038,46 +1285,45 @@
       </div>
     </div>
   </section>
-
   <!-- Pricing -->
   <section id="pricing">
     <div class="container">
       <h2 class="section-title">Simple, Clear Pricing</h2>
       <p class="section-subtitle">No hidden fees. Choose the service that fits your needs and budget. We make it easy and friendly.</p>
       <div class="pricing-grid">
-        <a href="#order" class="price-card" onclick="selectService('CV', 'R140')">
+        <a href="#order" class="price-card" onclick="selectService('CV', 'R140', 'cv')">
           <h3>CV</h3>
           <div class="price">R140</div>
           <p>Professional CV Writing</p>
         </a>
-        <a href="#order" class="price-card" onclick="selectService('Cover Letter', 'R140')">
+        <a href="#order" class="price-card" onclick="selectService('Cover Letter', 'R140', 'cover_letter')">
           <h3>Cover Letter</h3>
           <div class="price">R140</div>
           <p>Tailored Cover Letter</p>
         </a>
-        <a href="#order" class="price-card" onclick="selectService('CV & Cover Letter Bundle', 'R200')">
+        <a href="#order" class="price-card" onclick="selectService('CV & Cover Letter Bundle', 'R200', 'cv_cover_letter')">
           <h3>CV & Cover Letter Bundle</h3>
           <div class="price">R200</div>
           <p>Complete Application Package</p>
           <small>Save R80 with this bundle!</small>
         </a>
-        <a href="#order" class="price-card" onclick="selectService('Brochure', 'R200')">
+        <a href="#order" class="price-card" onclick="selectService('Brochure', 'R200', 'brochure')">
           <h3>Brochure</h3>
           <div class="price">R200</div>
           <p>Custom Brochure Design</p>
         </a>
-        <a href="#order" class="price-card" onclick="selectService('Pamphlet', 'R200')">
+        <a href="#order" class="price-card" onclick="selectService('Pamphlet', 'R200', 'pamphlet')">
           <h3>Pamphlet</h3>
           <div class="price">R200</div>
           <p>Effective Pamphlet Design</p>
         </a>
-        <a href="#order" class="price-card" onclick="selectService('Brochure & Pamphlet Bundle', 'R300')">
+        <a href="#order" class="price-card" onclick="selectService('Brochure & Pamphlet Bundle', 'R300', 'brochure_pamphlet')">
           <h3>Brochure & Pamphlet Bundle</h3>
           <div class="price">R300</div>
           <p>Complete Marketing Package</p>
           <small>Save R100 with this bundle!</small>
         </a>
-        <a href="#order" class="price-card popular" onclick="selectService('Logo Design', 'R200')">
+        <a href="#order" class="price-card popular" onclick="selectService('Logo Design', 'R200', 'logo')">
             <span class="popular-tag">Popular</span>
           <h3>Logo Design</h3>
           <div class="price">R200</div>
@@ -1087,7 +1333,6 @@
       </div>
     </div>
   </section>
-
   <!-- Order Form Section -->
   <section id="order">
     <div class="container">
@@ -1097,43 +1342,63 @@
             <p><strong>Service:</strong> <span id="selected-service">Please select a service</span></p>
             <p><strong>Price:</strong> <span id="selected-price">R0</span></p>
         </div>
-
-        <form id="order-form" action="https://formsubmit.co/popzabrahams01@gmail.com" method="POST">
+        <form id="order-form" action="https://formsubmit.co/popzabrahams01@gmail.com" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_subject" value="New Order from CoverMeClever Website">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://formsubmit.co/popzabrahams01@gmail.com/thanks.html">
-
             <label for="customer-name">Full Name *</label>
             <input type="text" id="customer-name" name="name" placeholder="e.g., Jane Smith" required>
-
             <label for="customer-email">Email Address *</label>
             <input type="email" id="customer-email" name="email" placeholder="e.g., jane.smith@example.com" required>
-
             <label for="service-type">Service Ordered *</label>
             <input type="text" id="service-type" name="service_ordered" readonly required>
-
             <label for="order-description">Tell Us About It! *</label>
             <textarea id="order-description" name="description" placeholder="This is where the magic happens! The more detail, the better. For a CV: List your work history, skills, education. For a Cover Letter: What job are you applying for? For Designs: What's the message? Who's the audience? For Logo Design: Please describe your vision in detail - colors, style, elements you want included, etc." required></textarea>
-
+            <!-- File Upload Section -->
+            <div class="file-upload">
+                <label class="file-upload-label">Upload Supporting Documents (Optional)</label>
+                <div class="file-upload-wrapper">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div class="file-upload-text">Drag & drop files here or click to browse<br><small>Supports: PDF, DOC, DOCX, TXT (Max 5MB each)</small></div>
+                    <input type="file" id="document-upload" name="documents" class="file-upload-input" multiple accept=".pdf,.doc,.docx,.txt">
+                </div>
+                <div class="file-list" id="file-list"></div>
+            </div>
             <div id="payment-section">
                 <h3>Payment Method</h3>
                 <p>After submitting, we'll send you payment instructions via email. Easy peasy!</p>
                 <div class="payment-methods">
-                    <div class="payment-method selected">
+                    <div class="payment-method selected" data-method="eft">
                         <i class="fas fa-money-bill-wave"></i> Bank Transfer (EFT)
                     </div>
-                    <div class="payment-method">
-                        <i class="fab fa-cc-mastercard"></i> Card Payment (Coming Soon)
+                    <div class="payment-method" data-method="card">
+                        <i class="fab fa-cc-mastercard"></i> Card Payment
                     </div>
+                </div>
+                <!-- Bank Details -->
+                <div class="bank-details active" id="bank-details">
+                    <h4>Bank Transfer Details</h4>
+                    <div class="bank-info">
+                        <strong>Account Holder:</strong> <span>Leeston Abrahams</span>
+                        <strong>Account Number:</strong> <span>1533077248</span>
+                        <strong>Bank:</strong> <span>Savings Account</span>
+                        <strong>Reference:</strong> <span>Your Full Name</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 1rem;">
+                        Please use your full name as the reference when making the payment.
+                    </p>
+                </div>
+                <!-- PayFast Payment Form -->
+                <div class="payfast-payment" id="payfast-payment">
+                    <h4>Pay with Card</h4>
+                    <div id="payfast-form-container"></div>
                 </div>
                 <p style="font-size: 0.95rem; color: var(--text-light);"><em>* A payment link or invoice will be sent to your email shortly after we receive your order details.</em></p>
             </div>
-
             <button type="submit" class="btn">Submit Order & Pay</button>
         </form>
     </div>
   </section>
-
   <!-- Contact -->
   <section id="contact">
     <div class="container">
@@ -1146,13 +1411,10 @@
             <h3>Send Us a Message</h3>
             <form class="contact-form" action="https://formsubmit.co/popzabrahams01@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="New Message from CoverMeClever Website">
-              
               <label for="contact-name">Full Name *</label>
               <input type="text" id="contact-name" name="name" placeholder="Enter your full name" required>
-
               <label for="contact-email">Email Address *</label>
               <input type="email" id="contact-email" name="email" placeholder="your.email@example.com" required>
-
               <label for="contact-service">What can we help you with? *</label>
               <select id="contact-service" name="service" required>
                 <option value="" disabled selected>Select a service</option>
@@ -1164,14 +1426,11 @@
                 <option value="Bundle">Bundle Deal</option>
                 <option value="General Inquiry">Just saying Hi!</option>
               </select>
-
               <label for="contact-message">Your Message *</label>
               <textarea id="contact-message" name="message" placeholder="Drop us a line... we're all ears! How can we help you today?" required></textarea>
-
               <button type="submit" class="btn">Send Message</button>
             </form>
           </div>
-
           <!-- WhatsApp -->
           <div class="whatsapp-container">
             <h3>Prefer a Quick Chat?</h3>
@@ -1193,7 +1452,44 @@
       </div>
     </div>
   </section>
-
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+    <button class="chatbot-toggle" id="chatbotToggle">
+      <i class="fas fa-robot"></i>
+    </button>
+    <div class="chatbot" id="chatbot">
+      <div class="chatbot-header">
+        <h3>CoverMeClever Assistant</h3>
+        <button class="chatbot-close" id="chatbotClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+          Hi there! I'm your CoverMeClever assistant. How can I help you today?
+        </div>
+        <div class="message bot-message">
+          Try clicking one of these quick questions:
+        </div>
+      </div>
+      <div class="quick-questions" id="quickQuestions">
+        <div class="quick-question" data-question="What services do you offer?">Services</div>
+        <div class="quick-question" data-question="How much does a CV cost?">CV Pricing</div>
+        <div class="quick-question" data-question="How long does it take?">Turnaround</div>
+        <div class="quick-question" data-question="How do I pay?">Payment</div>
+        <div class="quick-question" data-question="Can I get revisions?">Revisions</div>
+        <div class="quick-question" data-question="How do I contact you?">Contact</div>
+        <div class="quick-question" data-question="What is included in a brochure design?">Brochure Details</div>
+        <div class="quick-question" data-question="Do you offer logo redesigns?">Logo Redesign</div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Ask me anything...">
+        <button id="chatbotSend">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -1201,16 +1497,57 @@
       <p>Crafting Professional Documents with a Personal Touch</p>
     </div>
   </footer>
-
   <script>
-    function selectService(serviceName, price) {
+    // Service Selection with PayFast form generation
+    function selectService(serviceName, price, serviceType) {
         document.getElementById('selected-service').textContent = serviceName;
         document.getElementById('selected-price').textContent = price;
         document.getElementById('service-type').value = serviceName + " (" + price + ")";
+        
+        // Generate PayFast form based on service
+        generatePayFastForm(serviceType, price.replace('R', ''));
+        
         document.getElementById('order').style.display = 'block';
         document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
     }
-
+    
+    // Generate PayFast form dynamically
+    function generatePayFastForm(serviceType, amount) {
+        const itemNames = {
+            'cv': 'CV',
+            'cover_letter': 'Cover letter',
+            'cv_cover_letter': 'CV and Cover letter',
+            'brochure': 'Brochure',
+            'pamphlet': 'Pamphlet',
+            'brochure_pamphlet': 'brochure and pamphlet',
+            'logo': 'logo'
+        };
+        
+        const item_name = itemNames[serviceType] || 'Service';
+        
+        const payFastForm = `
+            <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                <input required type="hidden" name="cmd" value="_paynow">
+                <input required type="hidden" name="receiver" pattern="[0-9]" value="31416887">
+                <input type="hidden" name="return_url" value="https://www.covermeclever.shop/order-confirmation">
+                <input type="hidden" name="cancel_url" value="https://www.covermeclever.shop/payment-cancelled">
+                <input type="hidden" name="notify_url" value="https://www.covermeclever.shop/api/payment/notify">
+                <input required type="hidden" name="amount" value="${amount}">
+                <input required type="hidden" name="item_name" maxlength="255" value="${item_name}">
+                <table>
+                    <tr>
+                        <td colspan=2 align=center>
+                            <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Light-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        `;
+        
+        document.getElementById('payfast-form-container').innerHTML = payFastForm;
+    }
+    
+    // Form Submission
     document.getElementById('order-form').addEventListener('submit', function(e) {
         const serviceName = document.getElementById('selected-service').textContent;
         if (serviceName === 'Please select a service') {
@@ -1219,12 +1556,10 @@
             document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
         }
     });
-    
     // Mobile menu toggle
     document.getElementById('mobileMenuBtn').addEventListener('click', function() {
         const nav = document.getElementById('mainNav');
         nav.classList.toggle('active');
-        
         // Change icon
         const icon = this.querySelector('i');
         if (nav.classList.contains('active')) {
@@ -1235,7 +1570,6 @@
             icon.classList.add('fa-bars');
         }
     });
-    
     // Close mobile menu when clicking a link
     document.querySelectorAll('#mainNav a').forEach(link => {
         link.addEventListener('click', () => {
@@ -1246,12 +1580,10 @@
             menuBtn.querySelector('i').classList.add('fa-bars');
         });
     });
-    
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         const nav = document.getElementById('mainNav');
         const menuBtn = document.getElementById('mobileMenuBtn');
-        
         if (nav.classList.contains('active') && 
             !nav.contains(event.target) && 
             !menuBtn.contains(event.target)) {
@@ -1260,7 +1592,210 @@
             menuBtn.querySelector('i').classList.add('fa-bars');
         }
     });
+    // File Upload Handling
+    const fileInput = document.getElementById('document-upload');
+    const fileList = document.getElementById('file-list');
+    fileInput.addEventListener('change', function() {
+        fileList.innerHTML = '';
+        if (this.files.length > 0) {
+            for (let i = 0; i < this.files.length; i++) {
+                const file = this.files[i];
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `<i class="fas fa-file"></i> ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+                fileList.appendChild(fileItem);
+            }
+        }
+    });
+    // Payment Method Selection
+    document.querySelectorAll('.payment-method').forEach(method => {
+        method.addEventListener('click', function() {
+            // Remove selected class from all methods
+            document.querySelectorAll('.payment-method').forEach(m => {
+                m.classList.remove('selected');
+            });
+            // Add selected class to clicked method
+            this.classList.add('selected');
+            // Show/hide payment details based on selection
+            const bankDetails = document.getElementById('bank-details');
+            const payfastPayment = document.getElementById('payfast-payment');
+            
+            if (this.dataset.method === 'eft') {
+                bankDetails.classList.add('active');
+                payfastPayment.classList.remove('active');
+            } else if (this.dataset.method === 'card') {
+                bankDetails.classList.remove('active');
+                payfastPayment.classList.add('active');
+            }
+        });
+    });
+    // Chatbot Functionality
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbot = document.getElementById('chatbot');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSend = document.getElementById('chatbotSend');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const quickQuestions = document.getElementById('quickQuestions');
+    // Toggle chatbot visibility
+    chatbotToggle.addEventListener('click', function() {
+        chatbot.classList.toggle('open');
+        if (chatbot.classList.contains('open')) {
+            chatbotInput.focus();
+        }
+    });
+    // Close chatbot
+    chatbotClose.addEventListener('click', function() {
+        chatbot.classList.remove('open');
+    });
+    // Send message function
+    function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (message) {
+            // Add user message
+            addMessage(message, 'user');
+            chatbotInput.value = '';
+            // Show typing indicator
+            showTypingIndicator();
+            // Simulate bot response after delay
+            setTimeout(() => {
+                removeTypingIndicator();
+                const response = getBotResponse(message);
+                addMessage(response, 'bot');
+            }, 1000);
+        }
+    }
+    // Add message to chat
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}-message`;
+        messageDiv.textContent = text;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    // Show typing indicator
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'typing-indicator';
+        typingDiv.id = 'typing-indicator';
+        typingDiv.innerHTML = `
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        `;
+        chatbotMessages.appendChild(typingDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    // Remove typing indicator
+    function removeTypingIndicator() {
+        const typingIndicator = document.getElementById('typing-indicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
+    }
+    // Get bot response based on user input
+    function getBotResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        // CV-related responses
+        if (lowerMessage.includes('cv') || lowerMessage.includes('resume')) {
+            return "Our CV writing service costs R140. We create professional CVs tailored to your industry and experience. For the best results, please provide details about your work history, skills, and education when ordering.";
+        }
+        // Cover letter responses
+        if (lowerMessage.includes('cover letter') || lowerMessage.includes('application letter')) {
+            return "A tailored cover letter costs R140. It complements your CV perfectly. When ordering, tell us about the job you're applying for so we can customize your letter accordingly.";
+        }
+        // Bundle responses
+        if (lowerMessage.includes('bundle') || lowerMessage.includes('both')) {
+            return "We offer a CV & Cover Letter Bundle for R200 (save R80!). This is our most popular option for job seekers. We also have a Brochure & Pamphlet Bundle for R300 (save R100!) for businesses.";
+        }
+        // Design services
+        if (lowerMessage.includes('logo') || lowerMessage.includes('design')) {
+            return "Our logo design service is R200. For the best results, please describe your vision in detail when ordering - including colors, style preferences, and any elements you'd like included. We also offer brochure (R200) and pamphlet (R200) design services.";
+        }
+        // Pricing responses
+        if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much')) {
+            return "Our pricing is simple and transparent:\n• CV: R140\n• Cover Letter: R140\n• CV & Cover Letter Bundle: R200 (save R80!)\n• Brochure: R200\n• Pamphlet: R200\n• Brochure & Pamphlet Bundle: R300 (save R100!)\n• Logo Design: R200";
+        }
+        // Payment responses
+        if (lowerMessage.includes('payment') || lowerMessage.includes('pay')) {
+            return "We accept payments via bank transfer (EFT) to:\nAccount Holder: Leeston Abrahams\nAccount Number: 1533077248 (Savings Account)\nPlease use your full name as the reference. We also offer card payments through PayFast for your convenience!";
+        }
+        // Turnaround responses
+        if (lowerMessage.includes('time') || lowerMessage.includes('turnaround') || lowerMessage.includes('how long')) {
+            return "Our standard turnaround time is 3-5 business days. For urgent requests, we offer a 48-hour express service for an additional R50. Just let us know when placing your order if you need it urgently.";
+        }
+        // Revision responses
+        if (lowerMessage.includes('revision') || lowerMessage.includes('change')) {
+            return "We offer one free revision within 7 days of delivery. If you need additional changes, we charge R50 per revision. We want to make sure you're completely satisfied with your documents!";
+        }
+        // Contact responses
+        if (lowerMessage.includes('contact') || lowerMessage.includes('reach') || lowerMessage.includes('talk')) {
+            return "You can reach us in several ways:\n1. Fill out the contact form on our website\n2. Chat with us on WhatsApp at +27 71 861 7824\n3. Email us at popzabrahams01@gmail.com\nWe typically respond within 24 hours during business days.";
+        }
+        // Services response
+        if (lowerMessage.includes('service') || lowerMessage.includes('what do you offer')) {
+            return "We offer a range of professional document services:\n• CV Writing (R140)\n• Cover Letters (R140)\n• Brochure Design (R200)\n• Pamphlet Design (R200)\n• Logo Design (R200)\n• Bundles for savings!";
+        }
+        // Brochure details
+        if (lowerMessage.includes('brochure') && (lowerMessage.includes('include') || lowerMessage.includes('detail'))) {
+            return "Our brochure design service (R200) includes:\n• Professional layout design\n• Up to 4 pages\n• High-quality graphics and images\n• Brand-consistent styling\n• Print-ready PDF format\n• One revision included";
+        }
+        // Logo redesign
+        if (lowerMessage.includes('logo') && lowerMessage.includes('redesign')) {
+            return "Yes, we offer logo redesign services for R200. If you already have a logo but want to refresh it, just let us know what changes you'd like. We'll work with your existing brand elements to create an updated version that better represents your business.";
+        }
+        // General greeting responses
+        if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+            return "Hello! I'm here to help you with any questions about our services. You can ask me about pricing, services, turnaround times, or anything else you'd like to know!";
+        }
+        // Default response
+        return "Thanks for your message! I'm here to help with any questions about our services. You can ask me about:\n• CV and cover letter writing\n• Design services (logos, brochures, pamphlets)\n• Pricing and bundles\n• Turnaround times\n• Payment methods\n• Revisions\nIf you need more specific assistance, feel free to contact us directly through the form or WhatsApp!";
+    }
+    // Send message on button click
+    chatbotSend.addEventListener('click', sendMessage);
+    // Send message on Enter key
+    chatbotInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+    // Quick questions functionality
+    document.querySelectorAll('.quick-question').forEach(question => {
+        question.addEventListener('click', function() {
+            const questionText = this.getAttribute('data-question');
+            addMessage(questionText, 'user');
+            // Show typing indicator
+            showTypingIndicator();
+            // Simulate bot response after delay
+            setTimeout(() => {
+                removeTypingIndicator();
+                const response = getBotResponse(questionText);
+                addMessage(response, 'bot');
+            }, 1000);
+        });
+    });
+    // Close chatbot when clicking outside
+    document.addEventListener('click', function(event) {
+        if (chatbot.classList.contains('open') && 
+            !chatbot.contains(event.target) && 
+            !chatbotToggle.contains(event.target)) {
+            chatbot.classList.remove('open');
+        }
+    });
+    // Handle window resize for chatbot positioning
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 480 && chatbot.classList.contains('open')) {
+            // Adjust chatbot position for mobile
+            chatbot.style.left = '15px';
+            chatbot.style.right = '15px';
+            chatbot.style.width = 'calc(100vw - 30px)';
+        } else if (window.innerWidth > 480 && chatbot.classList.contains('open')) {
+            // Reset to desktop positioning
+            chatbot.style.left = 'auto';
+            chatbot.style.right = '20px';
+            chatbot.style.width = '350px';
+        }
+    });
   </script>
-
 </body>
 </html>
